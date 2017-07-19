@@ -16,8 +16,8 @@ public class PriceTest {
 
     @Test
     public void shouldHaveDifferentSameEqualsAndHashCodeWhenPricesAreTheSame() {
-        assertFalse("Equals should match", priceInPence("20").equals(priceInPence("30")));
-        assertFalse("Hashcode should match", priceInPence("20").hashCode() ==  priceInPence("30").hashCode());
+        assertFalse("Equals should not match", priceInPence("20").equals(priceInPence("30")));
+        assertFalse("Hashcode should not match", priceInPence("20").hashCode() ==  priceInPence("30").hashCode());
     }
 
     @Test
