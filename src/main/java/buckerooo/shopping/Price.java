@@ -3,7 +3,7 @@ package buckerooo.shopping;
 import java.math.BigDecimal;
 
 public class Price {
-    public final BigDecimal value;
+    private final BigDecimal value;
 
     Price(BigDecimal price) {
         this.value = price;
@@ -23,6 +23,10 @@ public class Price {
         if (!value.equals(price1.value)) return false;
 
         return true;
+    }
+
+    public BigDecimal inPence() {
+        return value;
     }
 
     @Override
